@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// ==========================================
+// 1. Fungsi Luas Lingkaran dari Jari-Jari
+// ==========================================
+function hitungLuasLingkaran(jariJari) {
+  return Math.PI * jariJari * jariJari;
+}
+
+let inputJariJari = Number(prompt("1. Masukkan jari-jari lingkaran:"));
+let hasilLuas = hitungLuasLingkaran(inputJariJari);
+
+console.log("=== 1. Luas Lingkaran ===");
+console.log(`Luas lingkaran (r = ${inputJariJari}): ${hasilLuas.toFixed(2)}`);
+
+
+// ==========================================
+// 2. Fungsi Bilangan Terbesar dari Tiga Angka
+// ==========================================
+function bilanganTerbesar(a, b, c) {
+  return Math.max(a, b, c);
+}
+
+let angka1 = Number(prompt("2. Masukkan angka pertama:"));
+let angka2 = Number(prompt("2. Masukkan angka kedua:"));
+let angka3 = Number(prompt("2. Masukkan angka ketiga:"));
+
+console.log("\n=== 2. Bilangan Terbesar ===");
+console.log(`Angka terbesar dari (${angka1}, ${angka2}, ${angka3}) adalah:`, bilanganTerbesar(angka1, angka2, angka3));
+
+
+// ==========================================
+// 3. Arrow Function untuk Huruf Besar
+// ==========================================
+const keHurufBesar = (teks) => teks.toUpperCase();
+
+let inputTeks = prompt("3. Masukkan kata atau kalimat (huruf kecil):");
+
+console.log("\n=== 3. Huruf Besar ===");
+console.log("Hasil:", keHurufBesar(inputTeks));
+
+
+// ==========================================
+// 4. Filter untuk Angka Lebih dari 10
+// ==========================================
+// User input angka dipisah koma, lalu dipecah jadi array angka
+let inputArray = prompt("4. Masukkan beberapa angka dipisahkan koma (contoh: 5, 12, 8, 25, 30):");
+let daftarAngka = inputArray.split(",").map(Number);
+
+const lebihDariSepuluh = daftarAngka.filter((angka) => angka > 10);
+
+console.log("\n=== 4. Filter Angka > 10 ===");
+console.log("Daftar angka kamu:", daftarAngka);
+console.log("Angka lebih dari 10:", lebihDariSepuluh);
+    </script>
+</body>
+</html>
